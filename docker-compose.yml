@@ -1,0 +1,53 @@
+version: "2.3"
+
+volumes:
+  db_data:
+    driver: local
+
+services:
+  app-mysql:
+    container_name: app-mysql
+    image: mysql:5.7
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - app-mysql
+    ports:
+      - 5001:8080
+
+  my_app:
+    build: .
+    container_name: my_app
+    tty: true
+    restart: unless-stopped
+    depends_on:
+      - app-mysql
+    links:
+      - "app-mysql:mysql_db"
+      - "api-redis:redis_db"
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:3000"
+    volumes:
+      - ./:/app/
+      - ./volumes/logs:/var/log
+
+  api-redis:
+    image: redis:4.0.9
+    container_name: api-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"

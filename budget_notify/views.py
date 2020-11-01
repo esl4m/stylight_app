@@ -32,12 +32,8 @@ def check_budget(request):
     """
         Command to scan the budgets and send alerts 
     """
-    searching_date: str = str(datetime.today().date())
-    date = datetime.strptime(searching_date, '%Y-%m-%d')
-    # c_month = date.strftime("%b")
-    c_month = datetime.now().month
-    
-    budgets = Budget.objects.all().filter(month=c_month)
+    current_month = datetime.now().month
+    budgets = Budget.objects.all().filter(month=current_month)
 
     if not budgets:
         return HttpResponseNotFound("<h1>No entries for this month</h1>")

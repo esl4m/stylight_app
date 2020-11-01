@@ -17,3 +17,18 @@
 
 To run or insert the data first time:
 `./manage.py loaddata budget_notify/fixtures/intial_data.json`
+
+
+### Application using: 
+- Database: mysql 5.7
+- Django: 3.1.2
+
+### Questions:
+- Task total estimate time:
+`4 hours`
+
+- Does your solution avoid sending duplicate notifications?
+`Yes`
+
+- How does your solution handle a budget change after a notification has already been sent?
+`Script checks all the shops, not only the online shops`

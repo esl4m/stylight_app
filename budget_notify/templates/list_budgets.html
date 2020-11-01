@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Stylight - Budgets</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Stylight - List budgets</a></h1>
+        </div>
+
+        {% for budget in budgets %}
+        <div>
+            <!-- <h2>{{ budget.name }}</h2>
+            <p>Status {{ budget.online }}</p> -->
+            <p> Name: {{ budget.shop_id.name }} </p>
+            <p> Month: {{ budget.month }}</p>
+            <p> Budget Amount: {{ budget.budget_amount }} </p>
+            <p> Amount spent: {{ budget.amount_spent }} </p>
+            <p> Average Spent (%): {{ budget.average_spent }} </p>
+            
+            <hr>
+        </div>
+    {% endfor %}
+    </body>
+</html>

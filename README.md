@@ -10,8 +10,10 @@
 
 - To create super user inside docker `./manage.py createsuperuser`
 
+- Make migrations: `./manage.py makemigrations` 
+- Migrate: `./manage.py migrate`
+
 - Run the server like that: `./manage.py runserver` or restart the "web" container.
 
-To run / insert the data first time:
-` ./manage.py loaddata budget_notify/fixtures/intial_data.json`
-
+To run or insert the data first time:
+`./manage.py loaddata budget_notify/fixtures/intial_data.json`

@@ -8,69 +8,69 @@
       }
     },
     {
-        "model": "budget_notify.shop",
-        "pk": 2,
-        "fields": {
-          "name": "K-Market Ruokatori",
-          "online": 0
-        }
+      "model": "budget_notify.shop",
+      "pk": 2,
+      "fields": {
+        "name": "A101",
+        "online": 0
+      }
     },
     {
-        "model": "budget_notify.shop",
-        "pk": 3,
-        "fields": {
-          "name": "K-Market Ruokatori",
-          "online": 1
-        }
+      "model": "budget_notify.shop",
+      "pk": 3,
+      "fields": {
+        "name": "BIM",
+        "online": 1
+      }
     },
     {
-        "model": "budget_notify.shop",
-        "pk": 4,
-        "fields": {
-          "name": "K-Market Ruokatori",
-          "online": 1
-        }
+      "model": "budget_notify.shop",
+      "pk": 4,
+      "fields": {
+        "name": "HyperMarket",
+        "online": 1
+      }
     },
 
 
     {
-        "model": "budget_notify.budget",
-        "pk": 1,
-        "fields": {
-          "shop_id" : 1,
-          "month" : "2020-10-31",
-          "budget_amount": 910,
-          "amount_spent": 712.27
-        }
+      "model": "budget_notify.budget",
+      "pk": 1,
+      "fields": {
+        "shop_id" : 1,
+        "month" : "Oct",
+        "budget_amount": 910,
+        "amount_spent": 912.27
+      }
     },
     {
-        "model": "budget_notify.budget",
-        "pk": 2,
-        "fields": {
-          "shop_id" : 2,
-          "month" : "2020-10-31",
-          "budget_amount": 920,
-          "amount_spent": 722.27
-        }
+      "model": "budget_notify.budget",
+      "pk": 2,
+      "fields": {
+        "shop_id" : 2,
+        "month" : "Nov",
+        "budget_amount": 920,
+        "amount_spent": 722.27
+      }
     },
     {
-        "model": "budget_notify.budget",
-        "pk": 3,
-        "fields": {
-          "shop_id" : 3,
-          "month" : "2020-11-30",
-          "budget_amount": 630,
-          "amount_spent": 932.27
-        }
+      "model": "budget_notify.budget",
+      "pk": 3,
+      "fields": {
+        "shop_id" : 3,
+        "month" : "Nov",
+        "budget_amount": 630,
+        "amount_spent": 432.27
+      }
     },
     {
-        "model": "budget_notify.budget",
-        "pk": 4,
-        "fields": {
-          "shop_id" : 4,
-          "month" : "2020-12-31",
-          "budget_amount": 620,
-          "amount_spent": 632.27
-        }
+      "model": "budget_notify.budget",
+      "pk": 4,
+      "fields": {
+        "shop_id" : 4,
+        "month" : "Dec",
+        "budget_amount": 620,
+        "amount_spent": 63.27
+      }
     }
 ]
